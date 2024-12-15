@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - Otis Website</title>
+    <link rel="stylesheet" href="styles.css"> <!-- Link to the styles.css file -->
+</head>
+
+<body>
+
+    <div class="container">
+        <!-- Banner Section -->
+        <div class="banner">
+            <h1>Login to Otis Website</h1>
+        </div>
+
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="logo_image_url" alt="Otis Minecraft Logo"> <!-- Replace with actual logo URL -->
+        </div>
+
+        <!-- Login Section -->
+        <div class="login-section">
+            <h2>Please log in to access exclusive content</h2>
+            <form id="loginForm">
+                <input class="form-input" type="email" id="email" placeholder="Enter your email" required>
+                <input class="form-input" type="password" id="password" placeholder="Enter your password" required>
+                <div class="not-robot">
+                    <input type="checkbox" id="robotCheck">
+                    <label for="robotCheck">I am not a robot</label>
+                </div>
+                <br>
+                <button type="button" class="submit-btn" onclick="validateForm()">Log In</button>
+            </form>
+        </div>
+
+        <!-- Success Page (Hidden Initially) -->
+        <div class="success-page" id="successPage">
+            <h2>Welcome Back, Otis!</h2>
+            <p>Email: <span id="userEmail"></span></p>
+        </div>
+    </div>
+
+    <script src="script.js"></script> <!-- Link to the script.js file -->
+
+</body>
+
+</html>
