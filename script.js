@@ -1,3 +1,5 @@
+// This is a basic example to handle login and success display
+
 function validateForm() {
     const email = document.getElementById('email').value;
     const password = document.getElementById('password').value;
