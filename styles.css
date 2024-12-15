@@ -6,14 +6,14 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* YouTube uses Roboto font */
     background-color: #f9f9f9;
     color: #333;
     margin: 0;
     padding: 0;
 }
 
-/* Container */
+/* Container for the Page */
 .container {
     width: 80%;
     margin: 0 auto;
@@ -29,10 +29,12 @@ body {
     text-align: center;
     color: white;
     padding-top: 90px;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.5);
 }
 
 .banner h1 {
-    font-size: 3em;
+    font-size: 3.5em;
+    font-weight: 600;
     margin: 0;
 }
 
@@ -47,18 +49,24 @@ body {
     width: 150px;
     height: 150px;
     border: 5px solid #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
 /* Channel Info Section */
 .channel-info {
+    background-color: #fff;
+    box-shadow: 0px 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 30px;
+    margin-top: -30px;
     text-align: center;
-    margin-top: 20px;
+    border-radius: 10px;
+    margin-bottom: 30px;
 }
 
 .description {
-    max-width: 600px;
+    max-width: 800px;
     margin: 20px auto;
-    font-size: 1.2em;
+    font-size: 1.1em;
     color: #555;
 }
 
@@ -66,26 +74,42 @@ body {
     list-style-type: none;
     padding: 0;
     margin: 20px auto;
+    font-size: 1.1em;
 }
 
 .channel-features li {
-    font-size: 1.1em;
+    margin-bottom: 10px;
     color: #333;
-    margin: 5px 0;
 }
 
 .handle, .email, .youtube-link {
-    font-size: 1.1em;
+    font-size: 1.2em;
     margin: 10px 0;
 }
 
 .youtube-link a {
-    color: #0073e6;
+    color: #FF0000; /* YouTube red */
     text-decoration: none;
+    font-weight: 600;
 }
 
 .youtube-link a:hover {
     text-decoration: underline;
+}
+
+/* Button styling */
+.submit-btn {
+    padding: 10px 20px;
+    background-color: #FF0000; /* YouTube red */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+}
+
+.submit-btn:hover {
+    background-color: #CC0000;
 }
 
 /* Success Page (Hidden Initially) */
@@ -97,4 +121,34 @@ body {
 
 .success-page h2 {
     font-size: 2em;
+    font-weight: 600;
+    color: #FF0000; /* YouTube red */
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 768px) {
+    .container {
+        width: 90%;
+    }
+
+    .banner h1 {
+        font-size: 2.5em;
+    }
+
+    .logo img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .description {
+        font-size: 1em;
+    }
+
+    .channel-features li {
+        font-size: 1em;
+    }
+
+    .handle, .email, .youtube-link {
+        font-size: 1em;
+    }
 }
