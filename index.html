@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otis</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            width: 80%;
+            margin: 0 auto;
+            padding-top: 20px;
+        }
+
+        /* Banner Section */
+        .banner {
+            width: 100%;
+            height: 250px;
+            background-image: url('banner_image_url'); /* Replace with actual banner image URL */
+            background-size: cover;
+            background-position: center;
+            text-align: center;
+            color: white;
+            padding-top: 90px;
+        }
+
+        .banner h1 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        /* Logo Section */
+        .logo {
+            text-align: center;
+            margin-top: -100px;
+        }
+
+        .logo img {
+            border-radius: 50%;
+            width: 150px;
+            height: 150px;
+            border: 5px solid #fff;
+        }
+
+        /* Channel Info Section */
+        .channel-info {
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .description {
+            max-width: 600px;
+            margin: 20px auto;
+            font-size: 1.2em;
+            color: #555;
+        }
+
+        .handle, .email, .youtube-link {
+            font-size: 1.1em;
+            margin: 10px 0;
+        }
+
+        /* Form Section */
+        .login-section {
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .form-input {
+            padding: 10px;
+            font-size: 1em;
+            margin: 10px 0;
+            width: 250px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+
+        .submit-btn {
+            padding: 10px 20px;
+            font-size: 1.1em;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        .submit-btn:hover {
+            background-color: #45a049;
+        }
+
+        /* "I'm not a robot" Section */
+        .not-robot {
+            margin-top: 20px;
+        }
+
+        .not-robot input[type="checkbox"] {
+            transform: scale(1.5);
+            margin-right: 10px;
+        }
+
+        .not-robot label {
+            font-size: 1.2em;
+        }
+
+        /* New Page Section after successful info */
+        .success-page {
+            display: none;
+            text-align: center;
+            margin-top: 40px;
+        }
+
+        .success-page h2 {
+            font-size: 2em;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- Banner and Channel Info -->
+        <div class="banner">
+            <h1>Otis Website</h1>
+        </div>
+
+        <!-- Logo Section -->
+        <div class="logo">
+            <img src="logo_image_url" alt="Otis Minecraft Logo"> <!-- Replace with actual logo URL -->
+        </div>
+
+        <!-- Channel Info -->
+        <div class="channel-info">
+            <p class="description">
+                Welcome to the official channel of @Otis_Minecraft! Join Otis on epic Minecraft adventures, explore new builds, tips, and enjoy fun challenges. Stay tuned for exciting content!
+            </p>
+            <p class="handle">Channel Handle: @Otis_Minecraft</p>
+            <p class="email">Contact Email: otis.minecraft@example.com</p>
+            <p class="youtube-link"><a href="https://www.youtube.com/channel/@otis_minecraft" target="_blank">Visit Channel on YouTube</a></p>
+        </div>
+
+        <!-- Login Section -->
+        <div class="login-section">
+            <h2>Please log in to access exclusive content</h2>
+            <form id="loginForm">
+                <input class="form-input" type="email" id="email" placeholder="Enter your email" required>
+                <input class="form-input" type="password" id="password" placeholder="Enter your password" required>
+                <div class="not-robot">
+                    <input type="checkbox" id="robotCheck">
+                    <label for="robotCheck">I am not a robot</label>
+                </div>
+                <br>
+                <button type="button" class="submit-btn" onclick="validateForm()">Log In</button>
+            </form>
+        </div>
+
+        <!-- Success Page (Hidden Initially) -->
+        <div class="success-page" id="successPage">
+            <h2>Welcome Back, Otis!</h2>
+            <p>Email: <span id="userEmail"></span></p>
+        </div>
+    </div>
+
+    <script>
+        function validateForm() {
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+            const isRobotChecked = document.getElementById('robotCheck').checked;
+
+            // Validate the login credentials (basic simulation)
+            if (email === "otis.minecraft@example.com" && password === "ayushpgviiib" && isRobotChecked) {
+                // Hide login section and show success page
+                document.querySelector('.login-section').style.display = 'none';
+                document.getElementById('successPage').style.display = 'block';
+                document.getElementById('userEmail').textContent = email;
+            } else {
+                alert("Invalid credentials or please confirm you're not a robot.");
+            }
+        }
+    </script>
+
+</body>
+
+</html>
